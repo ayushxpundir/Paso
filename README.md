@@ -2,7 +2,7 @@
 
 Paso is a modern, responsive, and incredibly sleek browser-based password generator tool. 
 
-[![image](assests/screenshot.png)](https://paso-password-generator.vercel.app/)
+[![image](assets/screenshot.png)](https://paso-password-generator.vercel.app/)
 
 ## Features
 
