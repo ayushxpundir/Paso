@@ -266,7 +266,7 @@ input::-webkit-inner-spin-button {
     background: transparent;
     border: none;
     color: var(--text-muted);
-    padding: 8px;
+    padding: 1px;
     border-radius: 6px;
     cursor: pointer;
     display: inline-flex;
