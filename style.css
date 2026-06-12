@@ -1,0 +1,234 @@
+/* Color Palette Variables */
+:root {
+    --bg-dark: #111111;
+    /* Deep slate navy background */
+    --card-bg: #1d1e1f;
+    /* Lighter slate for container card */
+    --accent: #7e1818;
+    /* Modern indigo primary accent color */
+    --accent-hover: #7a0c0c;
+    /* Hover state for buttons */
+    --text-main: #f8fafc;
+    /* Clean off-white for text */
+    --text-muted: #8f9297;
+    /* Muted gray for labels and hints */
+    --border-color: #3d3d3d;
+    /* Subtle divider and input borders */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button,
+input[type="submit"],
+.checkbox-item {
+    /* Kills the default mobile tap background flash completely */
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    padding: 20px;
+
+    /* --- Dot Grid Background Design --- */
+    background-color: var(--bg-dark);
+    background-image: radial-gradient(rgba(189, 179, 179, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+    /* Keeps the grid locked perfectly in place */
+}
+
+/* Central Card UI Container */
+.container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Dedicated Password Output Box */
+.result-container {
+    background-color: rgba(15, 23, 42, 0.6);
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+}
+
+#result {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-align: center;
+}
+
+/* Used for styling the initial hint text in your JS */
+.result-placeholder {
+    color: var(--text-muted) !important;
+    font-size: 0.95rem !important;
+    font-weight: 400 !important;
+}
+
+/* Form Settings Grouping */
+.form-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-group label,
+.section-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Aligns input and generate button into a sleek unified bar */
+.input-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+input[type="number"] {
+    flex: 1;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: var(--accent);
+}
+
+input::placeholder {
+    color: #475569;
+}
+
+/* Generate Button Styling */
+button {
+    /* 1. Add these three lines to lock the layout engine */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+
+    /* 2. Add this to hint to the browser to handle the scaling smoothly */
+    will-change: transform;
+
+    background-color: var(--accent);
+    border: 1px solid var(--border-color);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+
+    /* 3. Include 'transform' in the transition style smoothly */
+    transition: background-color 0.2s, transform 0.1s ease-out;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Form Grid Checkboxes */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(15, 23, 42, 0.3);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.checkbox-item:hover {
+    background-color: rgba(99, 102, 241, 0.05);
+    border-color: rgba(155, 155, 155, 0.3);
+}
+
+.checkbox-item span {
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+/* Accent Color custom treatment for standard checkbox nodes */
+.checkbox {
+    accent-color: var(--accent);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Forces Select All checkbox to take up full row width */
+.select-all {
+    grid-column: span 2;
+    border-style: dashed;
+}
+
+/* For Chrome, Safari, Edge, and Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

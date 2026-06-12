@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso - Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assests/Paso.png" type="image/x-png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Paso</h1>
+            <p class="subtitle">Generate strong & secure passwords instantly</p>
+
+            <div class="result-container">
+                <div id="result" class="result-placeholder">Your secure password will appear here...</div>
+            </div>
+
+            <div class="form-body">
+                <div class="input-group">
+                    <label for="myinput">Length of Password</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="myinput" min="5" max="35" placeholder="Enter (05 to 35)">
+                        <button id="mysub">Generate</button>
+                    </div>
+                </div>
+
+                <label class="section-label">Include Characters</label>
+                <div class="checkbox-grid">
+                    <label class="checkbox-item select-all">
+                        <input type="checkbox" id="selectAll" class="checkbox">
+                        <span>Select All</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="c1" class="checkbox">
+                        <span>Lowercase</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="c2" class="checkbox">
+                        <span>Uppercase</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="c3" class="checkbox">
+                        <span>Symbols</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="c4" class="checkbox">
+                        <span>Numbers</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
