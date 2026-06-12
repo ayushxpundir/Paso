@@ -19,6 +19,13 @@
             <p class="subtitle">Generate strong & secure passwords instantly</p>
 
             <div class="result-container">
+                <button id="copyBtn" title="Copy to clipboard" aria-label="Copy to clipboard" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+                    </svg>
+                </button>
                 <div id="result" class="result-placeholder">Your secure password will appear here...</div>
             </div>
 
@@ -26,7 +33,7 @@
                 <div class="input-group">
                     <label for="myinput">Length of Password</label>
                     <div class="input-wrapper">
-                        <input type="number" id="myinput" min="5" max="35" placeholder="Enter (05 to 35)">
+                        <input type="number" id="myinput" min="5" max="100" placeholder="Enter (05 to 100)">
                         <button id="mysub">Generate</button>
                     </div>
                 </div>

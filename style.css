@@ -90,8 +90,8 @@ h1 {
 }
 
 #result {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: .95rem;
+    font-weight: 400;
     color: var(--text-main);
     text-align: center;
 }
@@ -231,4 +231,62 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+/* --- Copy Button Additions --- */
+
+.result-container {
+    position: relative; 
+    padding: 16px; 
+    margin-bottom: 24px;
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Adds clean breathing room between text and button */
+}
+
+/* When a password is active, align things cleanly from left-to-right */
+.result-container.has-password {
+    justify-content: space-between;
+    padding-right: 16px; /* Restores uniform padding borders */
+}
+
+#result {
+    flex: 1; /* Allows text box to occupy all remaining width */
+    font-size: .95rem; /* Slightly scale down for optimal 50+ character wrapping layouts */
+    font-weight: 400;
+    color: var(--text-main);
+    text-align: center;
+}
+
+#copyBtn {
+    /* REMOVED position: absolute; to fix the overlapping bug */
+    order: 2; /* Forces the button to render on the right side of text inside the flex row */
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0; /* CRITICAL: Prevents the button from being crushed when password text gets massive */
+}
+
+#copyBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-main);
+}
+
+#copyBtn:active {
+    transform: scale(0.9);
+}
+
+/* Success styling when copied */
+#copyBtn.copied {
+    color: #10b981 !important;
+    background-color: rgba(16, 185, 129, 0.1);
 }
