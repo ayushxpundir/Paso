@@ -2,7 +2,7 @@
 
 Paso is a modern, responsive, and incredibly sleek browser-based password generator tool. 
 
-![](./assets/paso.mp4)
+![Image](./assets/web-paso.png)
 
 ## Features
 
