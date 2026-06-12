@@ -18,7 +18,7 @@ Since this app is built purely with vanilla frontend languages, it has **zero ex
 
 1. **Clone the repository:**
    ```bash
-   git clone <git-url>
+   git clone https://github.com/ayushxpundir/Paso.git
 2. **Navigate into the directory:**
     ```bash
     cd Paso
